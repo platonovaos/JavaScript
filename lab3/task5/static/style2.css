@@ -1,0 +1,25 @@
+body {
+    padding: 30px;
+    background: rgb(128, 241, 232);
+    font-family: Geneva, Arial, Helvetica, sans-serif;
+    font-size: 200%;
+}
+
+p {
+    color: blue;
+}
+
+h1 {
+    font-size: 50px;
+    color: blue;
+}
+
+button {
+    padding: 6px;
+    background: rgb(31, 147, 177);
+    color: blue;
+    cursor: pointer;
+    display: inline-block;
+    height: 50px;
+    width: 170px;
+}

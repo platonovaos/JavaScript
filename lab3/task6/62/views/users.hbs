@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Пользователи</title>
+</head>
+<body>
+    
+<h2>
+    {{descriptionValue}}
+</h2>
+
+{{#each usersArray}}
+        <div style="background: rgb(241, 241, 132); margin-bottom: 15px; padding: 8px;">
+            Логин: {{login}} 
+            <br>
+            Пароль: {{password}}
+            <br> 
+            Хобби: {{hobby}}
+            <br> 
+            Возраст: {{age}}
+        </div>
+{{/each}}
+
+</body>
+</html>

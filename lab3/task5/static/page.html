@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Моя страница</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <h1>Запись в файл</h1>
+
+    <p>Введите почту</p>
+    <input id="mail" type="text" spellcheck="false" autocomplete="off">
+    <br>
+
+    <p>Введите фамилию</p>
+    <input id="surname" type="text" spellcheck="false" autocomplete="off">
+    <br>
+
+    <p>Введите номер телефона</p>
+    <input id="phoneNumber" type="text" spellcheck="false" autocomplete="off">
+    <br><br><br>
+    
+    <button onclick="makeAction()">Отправить</button>
+    <br><br><br>
+
+    <span id="result-label">Итог: </span>
+    <h2 id="result-label"></h2>
+
+<script>
+    "use strict";
+    function ajaxPost(urlString, bodyString, callback) {
+        let r = new XMLHttpRequest();
+        r.open("POST", urlString, true);
+        r.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+        r.send(bodyString);
+        r.onload = function() {
+            callback(r.response);
+        }
+    }
+
+    function makeAction() {
+        const mail = (document.getElementById("mail")).value;
+        const surname = (document.getElementById("surname")).value;
+        const phoneNumber = (document.getElementById("phoneNumber")).value;
+
+        ajaxPost("/save/record", JSON.stringify({
+            mail, surname, phoneNumber
+        }), function(answerString) {
+            const answerObject = JSON.parse(answerString);
+            const result = answerObject.result;
+            document.getElementById('result-label').innerHTML = "Итог: " + result;
+        });
+    }
+</script>
+
+</body>
+</html>

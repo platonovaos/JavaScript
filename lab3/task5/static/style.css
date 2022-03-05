@@ -1,0 +1,30 @@
+body {
+    padding: 30px;
+    background: rgb(189, 241, 128);
+    font-family: Geneva, Arial, Helvetica, sans-serif;
+}
+
+p {
+    font-size: 25px;
+    color: green;
+}
+
+button {
+    padding: 6px;
+    height: 50px;
+    width: 170px;
+    background: green;
+    color: rgb(12, 235, 149);
+    cursor: pointer;
+    display: inline-block;
+}
+
+h1 {
+    font-size: 35x;
+    color: green;
+}
+
+h2 {
+    font-size: 35x;
+    color: green;
+}

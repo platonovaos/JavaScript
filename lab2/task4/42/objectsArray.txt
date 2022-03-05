@@ -1,0 +1,1 @@
+[{"name":"Olga","age":24},{"status":"Seller","id":1874,"perm":"Yes"},{"param1":"X","value1":-20,"param2":"Y","value2":-3},{"status":"Ok"}]

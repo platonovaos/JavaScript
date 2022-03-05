@@ -1,0 +1,6 @@
+swipl -s fb.pl
+consult('fb.pl').
+main.
+1.
+55.
+

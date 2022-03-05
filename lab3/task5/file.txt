@@ -1,0 +1,18 @@
+a	b	1
+e	r	1
+r	t	7
+p	o	8
+f	f	1
+fw	fe	12
+qewrw	qwerqwre	5
+ksljfaklh	kljhkljhlkhj	9720947
+ksljfaklh	kljhkljhlkhj	9720947
+ksljfaklh	kljhkljhlkhj	9720947
+qwe	ewtwe	4563452
+qwre	wer	35
+qw	er	12
+qwe	qwe	123
+m1	s1	1
+
+		
+		

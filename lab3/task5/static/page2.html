@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Моя страница</title>
+    <link rel="stylesheet" href="/style2.css">
+</head>
+<body>
+<h1>Чтение из файла</h1>
+
+    <p>Введите почту</p>
+    <input id="mail" type="text" spellcheck="false" autocomplete="off">
+    <br><br>
+
+    <button onclick="makeAction()">Отправить</button>
+    <br><br>
+
+    <span id="result-label">Итог: </span>
+    <h1 id="result-label"></h1>
+
+<script>
+    "use strict";
+    function ajaxGet(urlString, callback) {
+        let r = new XMLHttpRequest();
+        r.open("GET", urlString, true);
+        r.setRequestHeader("Content-Type", "text/plain;charset=UTF-8");
+        r.send(null);
+        r.onload = function() {
+            callback(r.response);
+        };
+    };
+
+    function makeAction() {
+        const mail = (document.getElementById("mail")).value;
+        const url = `/get/record?mail=${mail}`;
+        ajaxGet(url, function(result) {
+            const resObj = JSON.parse(result);
+            const resStr = resObj.result;
+
+            if (resStr != null) {
+                document.getElementById("result-label").innerHTML = "Итог: " + resStr;
+            }
+            else {
+                document.getElementById("result-label").innerHTML = "Итог: " + "Указанная почта отсутсвует";
+            }
+        });
+    }
+</script>
+</body>
+</html>
